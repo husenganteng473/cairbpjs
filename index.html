@@ -209,7 +209,7 @@
             </button>
             
             <!-- Secondary CTA (Direct WhatsApp link, for specific questions) -->
-            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20punya%20pertanyaan%20tentang%20pencairan%20BPJS" class="flex items-center justify-center bg-gray-200 text-gray-800 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-300 transition transform hover:scale-105">
+            <a href="https://wa.me/6285749519075?text=Halo,%20saya%20punya%20pertanyaan%20tentang%20pencairan%20BPJS" class="flex items-center justify-center bg-gray-200 text-gray-800 font-bold px-8 py-3 rounded-full shadow-md hover:bg-gray-300 transition transform hover:scale-105">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.553A7.952 7.952 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
                 Punya Pertanyaan? (WA)
             </a>
@@ -265,13 +265,6 @@
                 </button>
             </form>
 
-            <!-- Success Message (hidden initially) -->
-            <div id="success-message" class="hidden text-center p-6 mt-4 bg-green-50 rounded-lg border-2 border-green-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                <p class="font-semibold text-green-700">Data terkirim! Kami akan menghubungi Anda secepatnya via WhatsApp.</p>
-                <button onclick="closeModal()" class="mt-4 text-sm text-primary hover:text-teal-600 font-medium">Tutup</button>
-            </div>
-
         </div>
     </div>
     <!-- MODAL / DIALOG END -->
@@ -279,14 +272,12 @@
     <script>
         const modal = document.getElementById('contact-modal');
         const form = document.getElementById('submission-form');
-        const successMessage = document.getElementById('success-message');
 
         function openModal() {
             modal.classList.add('active');
             document.body.classList.add('overflow-hidden');
             // Reset form visibility and content
             form.style.display = 'block';
-            successMessage.classList.add('hidden');
         }
 
         function closeModal() {
@@ -310,12 +301,11 @@
 
             // Simulate submission process (2 second delay)
             form.style.display = 'none';
-            successMessage.classList.remove('hidden');
 
             setTimeout(() => {
                 closeModal();
                 const waText = `Halo, saya ingin mengajukan pencairan BPJS. Nama: ${nama}. Kendala: ${kendala}`;
-                window.location.href = `https://wa.me/6281234567890?text=${encodeURIComponent(waText)}`;
+                window.location.href = `https://wa.me/6285749519075?text=${encodeURIComponent(waText)}`;
             }, 3000); // 3 seconds before redirect
         }
         
