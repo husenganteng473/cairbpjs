@@ -4,6 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cairkan BPJS Ketenagakerjaan Anda Hari Ini!</title>
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/img/ico.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/img/ico.png">
+    <link rel="shortcut icon" href="src/img/ico.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/img/ico.png">
+    <meta name="msapplication-TileImage" content="src/img/ico.png">
+    <meta name="msapplication-TileColor" content="#008080">
+    
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="CairBPJS.COM - Cairkan BPJS Ketenagakerjaan Anda Hari Ini!">
+    <meta property="og:description" content="Layanan pencairan dana JHT BPJS Ketenagakerjaan yang cepat dan terpercaya. 100% online, proses 2-5 hari kerja. Tanpa ribet, data aman!">
+    <meta property="og:image" content="https://cairbpjs.com/src/img/ico.png">
+    <meta property="og:image:alt" content="CairBPJS.COM Logo - Layanan Pencairan BPJS">
+    <meta property="og:url" content="https://cairbpjs.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CairBPJS.COM">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CairBPJS.COM - Cairkan BPJS Ketenagakerjaan Anda Hari Ini!">
+    <meta name="twitter:description" content="Layanan pencairan dana JHT BPJS Ketenagakerjaan yang cepat dan terpercaya. 100% online, proses 2-5 hari kerja.">
+    <meta name="twitter:image" content="https://cairbpjs.com/src/img/ico.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="description" content="Layanan pencairan dana JHT BPJS Ketenagakerjaan yang cepat dan terpercaya. 100% online, proses 2-5 hari kerja. Tanpa ribet, data aman!">
+    <meta name="keywords" content="cairkan bpjs, jht, bpjs ketenagakerjaan, pencairan dana, online">
+    <meta name="author" content="CairBPJS.COM">
+    
     <!-- Load Tailwind CSS and Inter Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -65,10 +94,8 @@
     <header class="bg-white border-b border-gray-100 shadow-md sticky top-0 z-10">
         <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <!-- Logo: Coin Stack Icon in Primary Color -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-primary" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M11 2a2 2 0 00-2 2v2H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V8a2 2 0 00-2-2h-3V4a2 2 0 00-2-2h-2zm-1 4h4V4h-4v2zm7 4H7v8h10V10zM12 17a2 2 0 110-4 2 2 0 010 4z"/>
-                </svg>
+                <!-- Logo: Custom Icon -->
+                <img src="src/img/ico.png" alt="CairBPJS Logo" class="h-8 w-8">
                 <span class="text-2xl font-extrabold text-primary">CairBPJS<span class="text-yellow-500">.COM</span></span>
             </div>
             <!-- Menggunakan fungsi JS untuk tombol di header -->
@@ -249,8 +276,8 @@
                 </div>
 
                 <div>
-                    <label for="telepon" class="block text-sm font-medium text-gray-700 mb-1">Nomor WhatsApp Aktif</label>
-                    <input type="tel" id="telepon" required pattern="[0-9]{8,15}" title="Masukkan nomor telepon yang valid (8-15 digit)." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition" placeholder="Contoh: 081234567890">
+                    <label for="alamat" class="block text-sm font-medium text-gray-700 mb-1">Alamat</label>
+                    <input type="tel" id="alamat" title="Masukkan alamat." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition" placeholder="Contoh: Kota Samarinda">
                 </div>
                 
                 <!-- Kendala -->
@@ -289,24 +316,12 @@
 
         function submitForm() {
             const nama = document.getElementById('nama').value;
-            const telepon = document.getElementById('telepon').value;
+            const alamat = document.getElementById('alamat').value;
             const kendala = document.getElementById('kendala').value;
 
-            // Log data to console (as we don't have a backend/firestore here)
-            console.log('--- Data Pengajuan Cepat Terkirim ---');
-            console.log('Nama:', nama);
-            console.log('Telepon (WA):', telepon);
-            console.log('Kendala:', kendala);
-            console.log('------------------------------------');
-
-            // Simulate submission process (2 second delay)
-            form.style.display = 'none';
-
-            setTimeout(() => {
-                closeModal();
-                const waText = `Halo, saya ingin mengajukan pencairan BPJS. Nama: ${nama}. Kendala: ${kendala}`;
-                window.location.href = `https://wa.me/6285749519075?text=${encodeURIComponent(waText)}`;
-            }, 3000); // 3 seconds before redirect
+            closeModal();
+            const waText = `Halo, saya ingin mengajukan pencairan BPJS. Nama: ${nama}. Kendala: ${kendala}`;
+            window.location.href = `https://wa.me/6285749519075?text=${encodeURIComponent(waText)}`;
         }
         
         // Close modal when clicking outside the content
