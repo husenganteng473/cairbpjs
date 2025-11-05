@@ -1,0 +1,41 @@
+<!-- SVG Social Media Image untuk Open Graph -->
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f0fdfa"/>
+  
+  <!-- Background Pattern -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="none" stroke="#ccfbf1" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Logo Circle Background -->
+  <circle cx="300" cy="315" r="100" fill="#008080"/>
+  
+  <!-- Logo Icon (Simplified) -->
+  <rect x="250" y="270" width="100" height="90" rx="15" fill="white"/>
+  <circle cx="275" cy="295" r="8" fill="#008080"/>
+  <circle cx="325" cy="295" r="8" fill="#008080"/>
+  <rect x="260" y="320" width="80" height="8" rx="4" fill="#008080"/>
+  <rect x="270" y="335" width="60" height="6" rx="3" fill="#008080"/>
+  
+  <!-- Main Text -->
+  <text x="450" y="280" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800" fill="#1f2937">CairBPJS</text>
+  <text x="450" y="320" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="600" fill="#008080">.COM</text>
+  
+  <!-- Tagline -->
+  <text x="450" y="380" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600" fill="#374151">Cairkan BPJS Ketenagakerjaan</text>
+  <text x="450" y="420" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#6b7280">Dana JHT Anda, Siap Dicairkan</text>
+  
+  <!-- Features -->
+  <circle cx="470" cy="480" r="4" fill="#eab308"/>
+  <text x="490" y="488" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="500" fill="#374151">100% Online, Tanpa Ribet</text>
+  
+  <circle cx="470" cy="510" r="4" fill="#eab308"/>
+  <text x="490" y="518" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="500" fill="#374151">Proses 2-5 Hari Kerja</text>
+  
+  <circle cx="470" cy="540" r="4" fill="#eab308"/>
+  <text x="490" y="548" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="500" fill="#374151">Data Aman & Terpercaya</text>
+</svg>
