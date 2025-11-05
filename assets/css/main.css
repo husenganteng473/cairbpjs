@@ -1,0 +1,138 @@
+/* Main CSS File - CairBPJS.COM */
+
+/* Import fonts */
+@import url('./inter-font.css');
+
+/* Reset dan base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font utama */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Warna utama untuk tema ini (Teal) */
+.text-primary { 
+  color: #008080; /* Teal-700 */ 
+}
+
+.bg-primary { 
+  background-color: #008080; 
+}
+
+.border-primary { 
+  border-color: #008080; 
+}
+
+/* Custom animation for the main CTA button - "Jiggle" effect */
+@keyframes jiggle {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2); 
+  }
+}
+
+.cta-jiggle {
+  animation: jiggle 1.5s ease-in-out infinite;
+}
+
+/* Style untuk checkmark pada benefit */
+.benefit-item {
+  list-style: none;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.benefit-item::before {
+  content: '✓';
+  color: #FBBF24; /* Kuning untuk highlight */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Modal specific styling for smooth transition */
+.modal {
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Styling for the simulated testimonial image/box */
+.testimonial-visual {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ccfbf1 100%); /* Light teal gradient */
+  border: 1px solid #00808020;
+  box-shadow: inset 0 0 10px rgba(0, 128, 128, 0.1);
+}
+
+/* Utility classes yang sering digunakan */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #008080;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #006666;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+}
+
+.btn-secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background-color: #e5e7eb;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Loading animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

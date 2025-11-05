@@ -6,17 +6,17 @@
     <title>Cairkan BPJS Ketenagakerjaan Anda Hari Ini!</title>
     
     <!-- Favicon and Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="src/img/ico.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/img/ico.png">
-    <link rel="shortcut icon" href="src/img/ico.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="src/img/ico.png">
-    <meta name="msapplication-TileImage" content="src/img/ico.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/ico.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/ico.png">
+    <link rel="shortcut icon" href="assets/img/ico.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/ico.png">
+    <meta name="msapplication-TileImage" content="assets/img/ico.png">
     <meta name="msapplication-TileColor" content="#008080">
     
     <!-- Open Graph Meta Tags for Social Media Sharing -->
     <meta property="og:title" content="CairBPJS.COM - Cairkan BPJS Ketenagakerjaan Anda Hari Ini!">
     <meta property="og:description" content="Layanan pencairan dana JHT BPJS Ketenagakerjaan yang cepat dan terpercaya. 100% online, proses 2-5 hari kerja. Tanpa ribet, data aman!">
-    <meta property="og:image" content="https://cairbpjs.com/src/img/ico.png">
+    <meta property="og:image" content="https://cairbpjs.com/assets/img/ico.png">
     <meta property="og:image:alt" content="CairBPJS.COM Logo - Layanan Pencairan BPJS">
     <meta property="og:url" content="https://cairbpjs.com">
     <meta property="og:type" content="website">
@@ -26,67 +26,16 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CairBPJS.COM - Cairkan BPJS Ketenagakerjaan Anda Hari Ini!">
     <meta name="twitter:description" content="Layanan pencairan dana JHT BPJS Ketenagakerjaan yang cepat dan terpercaya. 100% online, proses 2-5 hari kerja.">
-    <meta name="twitter:image" content="https://cairbpjs.com/src/img/ico.png">
+    <meta name="twitter:image" content="https://cairbpjs.com/assets/img/ico.png">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="description" content="Layanan pencairan dana JHT BPJS Ketenagakerjaan yang cepat dan terpercaya. 100% online, proses 2-5 hari kerja. Tanpa ribet, data aman!">
     <meta name="keywords" content="cairkan bpjs, jht, bpjs ketenagakerjaan, pencairan dana, online">
     <meta name="author" content="CairBPJS.COM">
     
-    <!-- Load Tailwind CSS and Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Mengatur font utama ke Inter */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Mengatur warna utama untuk tema ini (Teal) */
-        .text-primary { color: #008080; } /* Teal-700 */
-        .bg-primary { background-color: #008080; }
-        .border-primary { border-color: #008080; }
-        
-        /* Custom animation for the main CTA button - "Jiggle" effect */
-        @keyframes jiggle {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2); }
-        }
-        .cta-jiggle {
-            animation: jiggle 1.5s ease-in-out infinite;
-        }
-        
-        /* Style untuk checkmark pada benefit */
-        .benefit-item {
-            list-style: none;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        .benefit-item::before {
-            content: '✓';
-            color: #FBBF24; /* Kuning untuk highlight */
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        /* Modal specific styling for smooth transition */
-        .modal {
-            transition: opacity 0.3s ease-in-out;
-            pointer-events: none;
-        }
-        .modal.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        /* Styling for the simulated testimonial image/box */
-        .testimonial-visual {
-            background: linear-gradient(135deg, #f0fdf4 0%, #ccfbf1 100%); /* Light teal gradient */
-            border: 1px solid #00808020;
-            box-shadow: inset 0 0 10px rgba(0, 128, 128, 0.1);
-        }
-    </style>
+    <!-- Load Local CSS Files -->
+    <link href="assets/css/tailwind.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body class="bg-white min-h-screen text-gray-800">
 
@@ -95,7 +44,7 @@
         <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <!-- Logo: Custom Icon -->
-                <img src="src/img/ico.png" alt="CairBPJS Logo" class="h-8 w-8">
+                <img src="assets/img/ico.png" alt="CairBPJS Logo" class="h-8 w-8">
                 <span class="text-2xl font-extrabold text-primary">CairBPJS<span class="text-yellow-500">.COM</span></span>
             </div>
             <!-- Menggunakan fungsi JS untuk tombol di header -->
@@ -296,41 +245,8 @@
     </div>
     <!-- MODAL / DIALOG END -->
 
-    <script>
-        const modal = document.getElementById('contact-modal');
-        const form = document.getElementById('submission-form');
-
-        function openModal() {
-            modal.classList.add('active');
-            document.body.classList.add('overflow-hidden');
-            // Reset form visibility and content
-            form.style.display = 'block';
-        }
-
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.classList.remove('overflow-hidden');
-            // Reset the form
-            form.reset();
-        }
-
-        function submitForm() {
-            const nama = document.getElementById('nama').value;
-            const alamat = document.getElementById('alamat').value;
-            const kendala = document.getElementById('kendala').value;
-
-            closeModal();
-            const waText = `Halo, saya ingin mengajukan pencairan BPJS. Nama: ${nama}. Kendala: ${kendala}`;
-            window.location.href = `https://wa.me/6285749519075?text=${encodeURIComponent(waText)}`;
-        }
-        
-        // Close modal when clicking outside the content
-        modal.addEventListener('click', (e) => {
-            if (e.target.id === 'contact-modal') {
-                closeModal();
-            }
-        });
-    </script>
+    <!-- Load Local JavaScript -->
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
